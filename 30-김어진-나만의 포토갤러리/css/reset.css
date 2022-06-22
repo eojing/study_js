@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dokdo&family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Single+Day&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #222;
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+address {
+	font-style: normal;
+}
+
+hr {
+	display: none;
+}
+
+.text-center {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+/* screen reader만 읽게 하겠다 라는 의미의 클래스명 sr-only */
+/* 향후 포지션 학습시간에 자세히 다룰 예정 */
+.sr-only {
+	position: absolute;
+	left: -9999px;
+}
+
+body {
+	/* 페이지에서 세로 스크롤바가 나타났을 때 가로로 컨텐츠가 흔들리는 현상을 방지 */
+	overflow-y: scroll;
+}
