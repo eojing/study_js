@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+header > h1 {
+	text-align: center;
+}
+
+.box {
+	width: 375px;
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+#wrap {
+	width: calc(95px * 9 + 40px);
+	margin: 0 auto;
+}
+
+section >  {
+}
+section > .thmbs {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+section > .thmbs > li {
+	width: 74px;
+}
+
+section > .thmbs > li > a {
+	display: block;
+	height: 74px;
+}
+section img {
+	display: block;
+	width: 100%;
+}
+
+section > p {
+}
+
+section > p > #screen {
+}
+
+address {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
