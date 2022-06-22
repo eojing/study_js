@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>140_setInterval()_달리는_캐릭터</title>
+  <style>
+    #wrap {
+      margin: 50px auto;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto 0;
+
+
+    }
+
+    .button {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    button {
+      margin: 0 auto;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 style="text-align: center;">달리는 캐릭터</h1>
+    <p>
+      <img src="./images/run_1.gif" alt="">
+
+
+    </p>
+    <div class="button">
+      <button>달리기</button>
+      <button>멈추기</button>
+    </div>
+  </div>
+
+
+  <script>
+
+    runKey = null;
+    const $img = document.querySelector('img');
+    const $btn = document.querySelectorAll('button');
+
+    let running = ['./images/run_1.gif', './images/run_2.gif', './images/run_3.gif', './images/run_4.gif', './images/run_5.gif', './images/run_6.gif', './images/run_7.gif', './images/run_8.gif', './images/run_9.gif', './images/run_10.gif'];
+
+    let runningIndex = 0;
+
+    function run() {
+      runningIndex = runningIndex + 1;
+      if (runningIndex == 10) {
+        runningIndex = 0;
+      };
+    }
+
+
+
+
+
+    const run1 = './images/run_1.gif'
+    const run2 = './images/run_2.gif'
+    const run3 = './images/run_3.gif'
+
+    $btn[0].addEventListener('click', function () {
+      setInterval(function () {
+        $img.innerHTML('src', 'running[runningIndex');
+      }, 100)
+    })
+
+
+
+  </script>
+</body>
+
+</html>

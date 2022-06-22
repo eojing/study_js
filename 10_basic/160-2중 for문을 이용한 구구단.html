@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>160-2중 for문을 이용한 구구단</title>
+  <!-- <script>
+    // 콘솔창에 구구단 출력하기
+    let dan = 2;
+    while (dan < 10) {
+      console.log(dan + '단');
+
+      let n = 1;
+      while (n < 10) {
+        console.log(dan + '*' + n + '=' + dan * n);
+        console.log(dan * n);
+        n++;
+      }
+
+      dan++;
+    }
+  </script> -->
+</head>
+
+<body>
+  <h1>구구단</h1>
+  <p class="gugudan">?</p>
+  <button>출력하기</button>
+  <script>
+    //2중 for문을 사용하여 p.gugudan에 샘플처럼 출력하시오
+    const $btn = document.querySelector('button')
+    const $p = document.querySelector('.gugudan')
+
+    $btn.addEventListener('click', function () {
+      let str = '';
+      for (let dan = 2; dan < 10; dan++) {
+        str = str + '<br />' + dan + '단' + '<br />'
+
+        for (let n = 1; n < 10; n++) {
+          str = str + dan + '*' + n + '=' + (dan * n) + '<br />';
+        }
+      } $p.innerHTML = str;
+    })
+
+
+  </script>
+</body>
+
+</html>

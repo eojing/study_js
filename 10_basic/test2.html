@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>버튼누르면 이미지 바꾸기</h1>
+  <img class="runOne" src="./../images/run_1.gif" alt="">
+  <button>눌러</button>
+  <script>
+    const $runOne = document.querySelector('.runOne');
+    const $btn = document.querySelector('button');
+
+
+
+
+
+    $btn.addEventListener('click', () => {
+      $runOne.textContent = './../images/run_2.gif';
+    });
+  </script>
+</body>
+
+</html>

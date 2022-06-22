@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <link id="fav" rel="shortcut icon" href="#">
+  <title>150_setInterval()_움직이는_파비콘</title>
+
+</head>
+
+<body>
+  <h1>움직이는 파비콘</h1>
+  <script>
+    let num = 0;
+
+    setInterval(function () {
+      if (num < 20) {
+        num++;
+      } else {
+        num = 1;
+      }
+
+      console.log('num=', num);
+
+      const $fav = document.querySelector('#fav');
+      $fav.setAttribute('href', './../images/' + num + '.ico');
+
+    }, 300);
+
+
+    const arrSrc = [
+      './../images/1.ico',
+      './../images/2.ico',
+      './../images/3.ico',
+      './../images/4.ico',
+      './../images/5.ico',
+      './../images/6.ico',
+      './../images/7.ico',
+      './../images/8.ico',
+      './../images/9.ico',
+      './../images/10.ico',
+      './../images/11.ico',
+      './../images/12.ico',
+      './../images/13.ico',
+      './../images/14.ico',
+      './../images/15.ico',
+      './../images/16.ico',
+      './../images/17.ico',
+      './../images/18.ico',
+      './../images/19.ico',
+      './../images/20.ico',
+    ];
+
+
+  </script>
+</body>
+
+</html>

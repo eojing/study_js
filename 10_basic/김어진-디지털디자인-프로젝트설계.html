@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>김어진-디지털디자인-프로젝트설계</title>
+  <script>
+    /**
+     * 전체를 감싸는 wrap을 만든다 
+     * wrap에게 margin : 0 auto; 를 준다.
+     * h1에게 text-align : center; 적용
+     * 반지름, input, button을 div.box에 넣는다.
+     * width값과 height값을 정한다.
+     * border-bottom을 준다.
+     * 원둘레와 원넓이를 div.underbox 에 넣는다.
+     * 반지름 값을 Number로 바꿔준다.
+     * 버튼을 클릭하면 원둘레와 원넓이가 계산되는 이벤트를 추가한다.
+     * 게산된 값이 각각 원둘레와 원넓이에 들어가게 한다.
+     * 
+    */
+  </script>
+  <style>
+    #wrap {
+      width: 500px;
+      margin: 0 auto;
+      /* border: 1px solid #000; */
+    }
+
+    .box {
+      width: 300px;
+      height: 120px;
+      margin: 0 auto;
+      border-bottom: 2px solid #cccccc;
+    }
+
+    .box>button {
+      width: 80px;
+      height: 50px;
+      border-radius: 7px;
+      box-sizing: content-box;
+    }
+
+    .underbox {
+      width: 300px;
+      height: 150px;
+      margin: 50px auto;
+
+    }
+
+    .underbox>p.roundbox {
+      width: 330px;
+      height: 50px;
+      text-indent: 10px;
+      line-height: 50px;
+      border: 2px solid #000;
+      border-radius: 7px;
+    }
+
+    .underbox>p.area {
+      margin-top: 35px;
+
+    }
+
+    .underbox>p.areabox {
+      width: 330px;
+      height: 50px;
+      text-indent: 10px;
+      line-height: 50px;
+      border: 2px solid #000;
+      border-radius: 7px;
+    }
+  </style>
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 style="text-align: center;">원 둘레와 넓이 계산</h1>
+    <div class="box">
+
+      <p>반지름 :</p>
+
+      <input type="text" style="width:150px;height: 50px; margin-right: 20px; text-indent: 10px; border-radius: 7px;"
+        value="">
+
+      <button>계산</button>
+
+
+    </div>
+    <div class="underbox">
+      <p class="round">원둘레 :</p>
+      <p class="roundbox"></p>
+
+      <p class="area">원넓이 :</p>
+      <p class="areabox"></p>
+    </div>
+  </div>
+  <script>
+
+    //input 태그에 입력값을 가져오는 방법
+
+    const $round = document.querySelector('.roundbox');
+    const $area = document.querySelector('.areabox');
+    const $btn = document.querySelector('button');
+
+
+
+
+    $btn.addEventListener('click', function () {
+
+      let $radius = Number(document.querySelector('input').value)
+
+      const round = 2 * Math.PI * $radius;
+      console.log('원둘레 = ' + round);
+
+      $round.textContent = round;
+
+
+      const area = Math.PI * $radius * $radius;
+
+      console.log('원넓이 = ' + area);
+      $area.textContent = area;
+
+
+    })
+    //원의 둘레 : 2 * Math.PI * r
+    //원의 넓이 : Math.PI * r * r
+  </script>
+</body>
+
+</html>

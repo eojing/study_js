@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>짝수와 홀수 판단</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 style="text-align: center;">
+      입력한 값 <span class="x" style="color: red;">?</span>는
+      <span class="result" style="color: blue;">?</span> 입니다.
+    </h1>
+  </div>
+
+  <script>
+    //console.log(13%2);
+
+    //임의의 숫자를 입력받아 "짝수" 또는 "홀수"라는 메세지를 출력하는 코드를 작성하세요.
+
+    const $x = document.querySelector('.x');
+    const $result = document.querySelector('.result');
+
+    const num = Number(prompt('숫자를 입력해주세요'));
+
+    $x.textContent = num;
+
+    if (num % 2 == 0) {
+      $result.textContent = '짝수';
+    } else if (num % 2 == 1) {
+      $result.textContent = '홀수';
+    }
+
+  </script>
+</body>
+
+</html>
