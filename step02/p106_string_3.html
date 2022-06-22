@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>문자열 메소드</title>
+  <script>
+    //쌤의 이메일 '       mvcweb@naver.com   ' 에서 아이디(mvcweb)와 도메인(naver.com)을 추출후 userId, domain 변수에 할당하여 화면에 출력하시오.
+
+
+    let mail = '       mvcweb@naver.com   '
+
+    mail = mail.trim();
+    console.log('mail.length = ' + mail.length);
+
+    console.log('indexOf @ = ' + mail.indexOf('@'));
+
+    document.write('아이디는 = ' + mail.slice(0, 6) + '<br />');
+
+    document.write('도메인은 = ' + mail.slice(7));
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

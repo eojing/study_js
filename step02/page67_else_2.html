@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>두잇자바스크립트</title>
+  <script>
+    /*
+    confirm() API를 이용하여 아래와 같이 출력후
+    '현재시간은 10시52분 입니다'
+    */
+
+    const today = new Date();
+
+    const hours = today.getHours();//시간 추출
+    const minutes = today.getMinutes()//분 추출
+
+    const result = confirm('현재시간은 ' + hours + ":" + minutes + '분입니다. 일어나시겠습니까?');
+
+    if (result) {
+      document.write('오늘도 즐거운 하루 보내세요~!');
+    } else {
+      document.write('좋은 꿈 꾸세요~!');
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
