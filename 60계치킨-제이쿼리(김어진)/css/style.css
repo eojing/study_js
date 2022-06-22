@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+header > h1.logo > a {
+	display: block;
+	width: 374px;
+	height: 133px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background-image: url(./../images/로고.png);
+
+	/* border: 1px solid #000; */
+}
+
+header > nav {
+	width: 100%;
+	background-color: #221a18;
+}
+
+header > nav > .gnb {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 1250px;
+	/* background-color: red; */
+	margin: 0 auto;
+}
+
+header > nav > .gnb > li {
+	width: calc((100%-230px)/8);
+}
+
+header > nav > .gnb > li:last-child {
+	/* background-color: red; */
+	width: 230px;
+}
+header > nav > .gnb > li > a {
+	display: block;
+	height: 50px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 50px;
+	color: white;
+	text-align: center;
+}
+
+header > nav > .gnb > li.on > a,
+header > nav > .gnb > li:hover > a {
+	color: #222;
+	background-color: #f6e056;
+}
+
+section {
+	width: 100%;
+}
+section > .slides {
+	overflow: hidden;
+	position: relative;
+	width: 1130px;
+	height: 600px;
+	margin: 30px auto;
+	/* border: 1px solid #000; */
+}
+section > .slides > .slides-container {
+	display: flex;
+	flex-flow: row nowrap;
+	position: absolute;
+
+	left: calc(1130px * 0);
+	top: 0;
+
+	width: calc(1130px * 10);
+
+	/* transition: 0.4s ease-in-out; */
+}
+section > .slides > .slides-container > p {
+	display: block;
+	width: 1130px;
+	height: 600px;
+	text-indent: -99999px;
+	background-size: cover;
+	background-position: center center;
+}
+
+section > .slides > .slides-container > p:nth-child(1) {
+	background-image: url(./../images/visual1.png);
+}
+
+section > .slides > .slides-container > p:nth-child(2) {
+	background-image: url(./../images/visual2.png);
+}
+section > .slides > .slides-container > p:nth-child(3) {
+	background-image: url(./../images/visual3.png);
+}
+section > .slides > .slides-container > p:nth-child(4) {
+	background-image: url(./../images/visual4.png);
+}
+section > .slides > .slides-container > p:nth-child(5) {
+	background-image: url(./../images/visual5.png);
+}
+section > .slides > .slides-container > p:nth-child(6) {
+	background-image: url(./../images/visual6.png);
+}
+section > .slides > .slides-container > p:nth-child(7) {
+	background-image: url(./../images/visual7.png);
+}
+section > .slides > .slides-container > p:nth-child(8) {
+	background-image: url(./../images/visual8.png);
+}
+section > .slides > .slides-container > p:nth-child(9) {
+	background-image: url(./../images/visual9.png);
+}
+section > .slides > .slides-container > p:nth-child(10) {
+	background-image: url(./../images/visual10.png);
+}
+
+section > .slides > ul.slides-pagenation {
+	display: flex;
+	flex-flow: row nowrap;
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	width: calc(10px*10)+30px;
+	margin-left: -65px;
+}
+section > .slides > ul.slides-pagenation > li {
+	margin-right: 3px;
+}
+section > .slides > ul.slides-pagenation > li > a {
+	display: block;
+	width: 10px;
+	height: 10px;
+	text-indent: -9999px;
+	background-color: #221a18;
+	border-radius: 100px;
+}
+
+section > .slides > ul.slides-pagenation > li:hover > a,
+section > .slides > ul.slides-pagenation > li.on > a {
+	width: 20px;
+	background-color: #fe7c00;
+}
+
+section > .slides > a {
+	position: absolute;
+	top: 50%;
+	width: 40px;
+	height: 90px;
+	margin-top: -45px;
+	display: block;
+	text-indent: -9999px;
+	/* border: 1px solid #000; */
+}
+
+section > .slides > a.prev {
+	left: 0;
+}
+
+section > .slides > a.next {
+	right: 0;
+}
